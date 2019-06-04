@@ -41,7 +41,7 @@ for pageNumber in range(1, 50):
             opener.addheaders = [('User-Agent',
                                   'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1941.0 Safari/537.36')]
             urllib.request.install_opener(opener)
-            filename = detail_url.split("/")[-1].split('.')[-1]
+            filename = detail_url.split("/")[-1].split('.')[0]
             urllib.request.urlretrieve(download_url, './books/raw/{}.epub'.format(filename))
             print('downloaded {}'.format(download_url))
             time.sleep(1)

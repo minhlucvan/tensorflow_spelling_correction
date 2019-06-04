@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
+# coding=utf-8
 
 # ## Spelling Correction using Tensorflow
 # The sections of the project are:
@@ -40,7 +41,7 @@ from sklearn.model_selection import train_test_split
 # Method to Load the book from his files
 def load_book(path):    
     input_file = os.path.join(path)
-    with codecs.open(input_file, encoding='utf-8') as f:
+    with open(input_file, encoding='utf_8') as f:
         content = f.read()
     return content
 
@@ -144,7 +145,6 @@ for code in codes:
 # Check the size of vocabulary and all of the values
 vocab_size = len(vocab_to_int)
 print("The vocabulary contains {} characters.".format(vocab_size))
-print(sorted(vocab_to_int))
 
 
 # In[12]:
